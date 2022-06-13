@@ -351,7 +351,7 @@ const schema = defineSchema({
   ],
 });
 
-const branch = "main";
+const branch = process.env.NEXT_PUBLIC_VERCEL_GIT_COMMIT_REF;
 const apiURL =
   process.env.NODE_ENV == "development"
     ? "http://localhost:4001/graphql"
